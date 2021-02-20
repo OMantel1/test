@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       .main {
         display: flex;
         width: 100vw;
         height: 100vh;
         background-color: rgb(53, 53, 60);
-
-        padding: 0;
-        margin: 0;
+        font-family: 'open sans';
       }
 
       .circle {
@@ -173,7 +174,7 @@
 
       .terms-text {
         /* font-size: 1.2vmin; */
-        font-size: 1.4vmin;
+        font-size: 1.2vmin;
       }
 
       .text-black {
@@ -256,13 +257,7 @@
           <p class="program-title">titre</p>
           <p class="program-text">test</p>
         </div>
-        <form
-          class="action"
-          id="validation"
-          name="validation"
-          action="{{route('streaming.launcher.postLauncher', [$data->url, $flatId, $token] )}}"
-          method="POST"
-        >
+        <form class="action">
           <button class="circle-button" type="submit">VISITER</button>
           <div class="terms terms-text">
             <input type="checkbox" id="checkbox1" name="checkbox1" />
