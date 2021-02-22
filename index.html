@@ -10,273 +10,90 @@
       rel="stylesheet"
     />
     <style>
-      .main {
+      .one input {
+        /* display: inline-block; */
+        background-color: royalblue;
+        margin: 0;
+        /* width: 16px;
+        height: 16px; */
+      }
+      label {
+        /* display: inline; */
+        /* text-align: right; */
+        /* background-color: royalblue; */
+        margin-left: 10px;
+      }
+
+      .one,
+      .two,
+      .three {
         display: flex;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgb(53, 53, 60);
-        font-family: "open sans";
+        align-content: flex-start;
+      }
+      .one {
+        font-size: 10px;
       }
 
-      .circle {
-        text-align: center;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50vmin;
-        height: 50vmin;
-        background-color: #9c6c6cb7;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        color: #090936;
-        border-radius: 50%;
+      .two {
+        font-size: 16px;
       }
 
-      .title {
-        font-size: 32px;
-        font-size: 3.2vmin;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: sans-serif;
-      }
-
-      @media screen and (max-width: 890px) {
-        .circle {
-          width: 70vmin;
-          height: 70vmin;
-        }
-
-        .title {
-          font-size: 12px;
-          font-size: 4vmin;
-        }
-      }
-
-      .circle-int,
-      .circle-ext {
-        margin: auto;
-        border-radius: 50%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-      }
-
-      .circle-int {
-        text-align: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        width: 50vmin;
-        height: 50vmin;
-        background-color: #ffffffb7;
-        color: #090936;
-      }
-
-      .circle-ext {
-        background-color: #ffffff63;
-        width: 58vmin;
-        height: 58vmin;
-      }
-
-      .logo {
-        display: block;
-        height: 32.5%;
-        width: auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        position: absolute;
-        top: 4%;
-      }
-
-      .logo img {
-        height: auto;
-        max-height: 75%;
-        width: auto;
-        max-width: 66%;
-        margin: auto;
-      }
-
-      .program {
-        word-wrap: break-word;
-        max-width: 94%;
-        text-transform: uppercase;
-        margin-bottom: 2%;
-      }
-
-      .program-city {
-        font-size: 20px;
-        font-weight: 500;
-        letter-spacing: 2px;
-        font-size: 2.6vmin;
-      }
-
-      .program-title {
-        font-size: 24px;
-        font-weight: 900;
-        letter-spacing: 2px;
-        font-size: 3.2vmin;
-        margin-bottom: 4px;
-      }
-
-      .action {
-        position: absolute;
-        bottom: 4%;
-      }
-
-      .circle-button {
-        padding: 0.8em 3em;
-        background-color: black;
-        color: white;
-        border-radius: 4px;
-        border: 0;
-        letter-spacing: 1px;
-        font-size: 0.8em;
-        font-size: 2vmin;
-        font-family: "open sans", Arial, Helvetica, sans-serif;
-      }
-
-      .terms {
-        padding-top: 4%;
-        max-width: 100%;
-        margin: auto;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        display: flex;
-      }
-
-      .terms input {
+      .two input {
+        margin: 0;
         border-radius: 0;
-        margin-top: 0;
-        margin-left: 0;
-        /* padding: 42px; */
-        width: 1.4vmin;
-        height: 1.4vmin;
-        /* width: 3vmin;
-        height: 3vmin; */
+        width:20px;
+        height: 20px;
       }
 
-      .terms-text {
-        /* font-size: 1.2vmin; */
-        font-size: 1.2vmin;
+      .three {
+        font-size: 22px;
+      }
+      .three input {
+        margin: 0;
+        border-radius: 0;
+        width: 22px;
+        height: 22px;
+        flex: 0 0 auto;
       }
 
-      .text-black {
-        color: black;
+      div {
+        margin-bottom: 30px;
       }
-
-      .error-message {
-        padding-top: 2%;
-        color: red;
-        font-size: 1.4vmin;
-        line-height: 1.6vmin;
-      }
-
-      .footer-logo {
-        position: absolute;
-        bottom: 0;
-        text-align: center;
-        width: 100%;
-        height: 4vmin;
-        margin-bottom: 3vmin;
-      }
-
-      .footer-logo img {
-        width: auto;
-        height: 100%;
-      }
-
-      @media (max-width: 890px) {
-        .circle-int {
-          width: 70vmin;
-          height: 70vmin;
-        }
-        .circle-ext {
-          width: 80vmin;
-          height: 80vmin;
-        }
-
-        .program-city {
-          font-size: 10px;
-          font-size: 3vmin;
-        }
-
-        .program-title {
-          font-size: 12px;
-          font-size: 4vmin;
-        }
-
-        .circle-button {
-          font-size: 0.8em;
-          font-size: 3vmin;
-        }
-
-        .terms-text {
-          font-size: 0.6rem;
-          font-size: 1.6vmin;
-        }
-
-        .terms input {
-          width: 8px;
-          height: 8px;
-        }
-      }
-      @media (max-width: 425px) {
-        .terms input {
-          width: 10px;
-          height: 10px;
-        }
-      }
-
-      /* @media (max-width: 360px) {
-        .terms input {
-          width: 8px;
-          height: 8px;
-        }
-      } */
     </style>
   </head>
 
   <body>
     <div class="main">
-      <div class="circle-ext"></div>
-      <div class="circle-int">
-        <div class="logo">
-          <img src="img/paper-5985445_640.jpg" alt="" />
+      <form action="">
+        <div class="one">
+          <input type="checkbox" />
+          <label for=""
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            aperiam earum, quas ipsum dolorum praesentium sequi dicta tempora
+            rem assumenda, nisi delectus optio, facere asperiores ex quis
+            consectetur qui voluptatum!</label
+          >
         </div>
-        <div class="program">
-          <p class="program-title">titre</p>
-          <p class="program-text">test</p>
+        <div class="two">
+          <input type="checkbox" />
+          <label for=""
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            aperiam earum, quas ipsum dolorum praesentium sequi dicta tempora
+            rem assumenda, nisi delectus optio, facere asperiores ex quis
+            consectetur qui voluptatum!</label
+          >
         </div>
-        <form class="action">
-          <button class="circle-button" type="submit">VISITER</button>
-          <div class="terms terms-text">
-            <input type="checkbox" id="checkbox1" name="checkbox1" />
-            <label for="checkbox1"
-              >J'accepte les conditions générales d'utilisation <br />
-              et les politiques de confidentialité</label
-            >
-          </div>
-          <div class="error-message"></div>
-        </form>
-      </div>
+
+        <div class="three">
+          <input type="checkbox" />
+          <label for=""
+            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            aperiam earum, quas ipsum dolorum praesentium sequi dicta tempora
+            rem assumenda, nisi delectus optio, facere asperiores ex quis
+            consectetur qui voluptatum!</label
+          >
+        </div>
+      </form>
     </div>
   </body>
 </html>
